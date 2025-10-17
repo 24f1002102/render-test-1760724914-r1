@@ -3,32 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello from Render</title>
+    <title>Hello from Render - Round 2</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
     <style>
+        /* Set the body's background to a purple to pink gradient */
         body {
+            background: linear-gradient(to right, purple, pink);
             height: 100vh;
-            margin: 0;
             display: flex;
-            align-items: center;
             justify-content: center;
-            background: linear-gradient(to right, blue, green);
-            color: white;
-            font-family: Arial, sans-serif;
+            align-items: center;
+            margin: 0;
         }
-        h1 {
-            text-align: center;
+        /* Bouncing animation for the text */
+        .bouncing {
+            animation: bounce 1s infinite;
+        }
+        /* Keyframes for the bounce animation */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Hello from Render</h1>
+    <div class="text-center">
+        <h1 class="bouncing">Hello from Render - Round 2</h1>
+    </div>
     <script>
-        // Simple error handling to ensure the script runs without issues
+        // Simple error handling to log any issues
         try {
-            console.log('Page is loaded successfully!');
+            console.log('Page loaded successfully.');
         } catch (error) {
-            console.error('Error occurred:', error);
+            console.error('Error loading page:', error);
         }
     </script>
 </body>
